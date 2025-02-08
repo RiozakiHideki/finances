@@ -10,6 +10,8 @@ from django.contrib.auth import authenticate, login as auth_login
 from .forms import RegisterForm, FilterForm, AddDataForm, AddDataUserForm, AddCategoryForm, AddBudgetForm, ChartForm, \
     DownloadDataForm
 from datetime import datetime
+import matplotlib
+matplotlib.use('Agg')  # Используем бэкэнд Agg для генерации изображений без GUI
 import matplotlib.pyplot as plt
 import io
 import base64
